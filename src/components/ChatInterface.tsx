@@ -15,6 +15,7 @@ import {
 import { Ionicons } from '@expo/vector-icons';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Message } from '../../types/chat';
+import SafetyButton from './SafetyButton';
 
 interface ChatInterfaceProps {
   onSendMessage: (message: string) => Promise<void>;
@@ -125,7 +126,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.headerTitle}>{supportName}</Text>
-        
+        <SafetyButton />
       </View>
 
       <KeyboardAvoidingView
