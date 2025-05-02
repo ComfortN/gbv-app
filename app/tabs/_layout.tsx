@@ -13,6 +13,8 @@ export default function TabsLayout() {
             iconName = focused ? 'home' : 'home-outline';
           } else if (route.name === 'chat') {
             iconName = focused ? 'chatbubbles' : 'chatbubbles-outline';
+          } else if (route.name === 'mood-journal') {
+            iconName = focused ? 'journal' : 'journal-outline';
           }
           
           
@@ -46,6 +48,14 @@ export default function TabsLayout() {
           headerShown: false,
         }} 
       />
+      
+      <Tabs.Screen 
+        name="mood-journal" 
+        options={{ 
+          title: 'Mood',
+        }} 
+      />
+
 
     </Tabs>
   );
