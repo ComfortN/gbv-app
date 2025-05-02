@@ -1,3 +1,5 @@
+// app/tabs/_layout.tsx
+
 import { Tabs } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { THEME_COLORS } from '../../src/constants/theme';
@@ -15,6 +17,8 @@ export default function TabsLayout() {
             iconName = focused ? 'chatbubbles' : 'chatbubbles-outline';
           } else if (route.name === 'mood-journal') {
             iconName = focused ? 'journal' : 'journal-outline';
+          } else if (route.name === 'resources') {
+            iconName = focused ? 'compass' : 'compass-outline';
           }
           
           
@@ -55,7 +59,15 @@ export default function TabsLayout() {
           title: 'Mood',
         }} 
       />
+      
+      <Tabs.Screen 
+        name="resources" 
+        options={{ 
+            title: 'Resources',
+            }} 
+            />
 
+      
 
     </Tabs>
   );
