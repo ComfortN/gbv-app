@@ -11,7 +11,10 @@ export default function TabsLayout() {
           
           if (route.name === 'index') {
             iconName = focused ? 'home' : 'home-outline';
+          } else if (route.name === 'chat') {
+            iconName = focused ? 'chatbubbles' : 'chatbubbles-outline';
           }
+          
           
           return <Ionicons name={iconName} size={size} color={color} />;
         },
@@ -32,6 +35,14 @@ export default function TabsLayout() {
         name="index" 
         options={{ 
           title: 'Home',
+          headerShown: false,
+        }} 
+      />
+      
+      <Tabs.Screen 
+        name="chat" 
+        options={{ 
+          title: 'Chat',
           headerShown: false,
         }} 
       />

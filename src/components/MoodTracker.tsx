@@ -1,4 +1,3 @@
-// src/components/MoodTracker.tsx
 import React from 'react';
 import { 
   View, 
